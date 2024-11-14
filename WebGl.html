@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer ></script>
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #000; /* Set background to black */
+      color: #FFFFFF; /* Set text color to white */
+         }
+        canvas { 
+
+            border: 1px solid #333;
+            border-radius: 20px;
+      display: block;
+      margin: 10px auto;
+      background-color: #000; /* Set canvas background to match */
+         }
+         button, input {
+      color: #FFFFFF; /* Text color for input and button */
+      background-color: #333; /* Button background */
+      border: 1px solid #555; /* Border color for input/button */
+    }
+    h1{
+        font-family: Inter,sans-serif;
+        font-size: 40px;
+        color: #fff;
+        line-height: 40px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1>WebGL Line Segments </h1>
+
+
+  <div>
+    <input type="number" id="xCoord" placeholder="x coordinate" style="width: 80px;">
+    <input type="number" id="yCoord" placeholder="y coordinate" style="width: 80px;">
+    <button onclick="addCustomSegment()">Add Custom Segment</button>
+  </div>
+
+  <canvas id="canvas" width="1000" height="500"></canvas>
+  <label for="lineWidth">Line Width:</label>
+  <input type="number" id="lineWidth" value="2" min="1" max="10" style="width: 40px; margin-right: 25px; ">
+  <button onclick="addRandomSegment()">Generate Random Segment</button>
+  <button onclick="undoSegment()" style="margin-left: 25px;">Undo</button> <!-- Undo button -->
+  
+</body>
+</html>
